@@ -5,12 +5,13 @@ document.getElementById('search-btn').addEventListener('click', async () => {
     const options = {
         method: 'GET',
         headers: {
-            'Accept-Language': 'en-US',
-            'Accept': 'application/json',
-            'Content-Type': 'application/json',
-            'X-Freepik-API-Key': apiKey
-        }
-    };
+          'Accept-Language': 'en-US',
+          'Accept': 'application/json',
+          'Content-Type': 'application/json',
+          'X-Freepik-API-Key': apiKey
+        },
+        mode: 'cors' // Set mode to 'cors'
+      };
 
     try {
         const response = await fetch(url, options);
